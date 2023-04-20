@@ -1,2 +1,3 @@
 # did-common-ts
-Shared DID library in Typescript
+
+Common TypeScript library for decentralized identity.
