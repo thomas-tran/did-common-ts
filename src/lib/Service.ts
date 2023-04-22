@@ -1,4 +1,4 @@
-import { JSONObject } from './Json';
+import { JSONObject } from "./Json";
 
 export class Service {
   constructor(
@@ -7,11 +7,11 @@ export class Service {
     public readonly serviceEndpoint: JSONObject
   ) {}
 
-    public toJson(): JSONObject {
-        return {
-            id: this.id,
-            type: this.type,
-            serviceEndpoint: this.serviceEndpoint
-        }
-    }
+  public toJson(): JSONObject {
+    return {
+      id: this.id,
+      type: this.type,
+      serviceEndpoint: this.serviceEndpoint,
+    };
+  }
 }

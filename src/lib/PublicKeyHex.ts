@@ -1,10 +1,10 @@
-import { JSONObject } from './Json';
-import { KeyFormat } from './KeyFormat';
+import { JSONObject } from "./Json";
+import { KeyFormat } from "./KeyFormat";
 
 export class PublicKeyHex extends KeyFormat {
   constructor(public readonly key: string) {
     if (!key) {
-      throw new Error('key is required.');
+      throw new Error("key is required.");
     }
     super();
   }

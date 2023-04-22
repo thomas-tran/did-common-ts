@@ -1,9 +1,9 @@
-import { JSONObject } from './Json';
-import { KeyFormat } from './KeyFormat';
-import { PublicKeyBase58 } from './PublicKeyBase58';
-import { PublicKeyHex } from './PublicKeyHex';
-import { PublicKeyJwk } from './PublicKeyJwk';
-import { PublicKeyPem } from './PublicKeyPem';
+import { JSONObject } from "./Json";
+import { KeyFormat } from "./KeyFormat";
+import { PublicKeyBase58 } from "./PublicKeyBase58";
+import { PublicKeyHex } from "./PublicKeyHex";
+import { PublicKeyJwk } from "./PublicKeyJwk";
+import { PublicKeyPem } from "./PublicKeyPem";
 
 export class VerificationMethod {
   constructor(
@@ -13,7 +13,7 @@ export class VerificationMethod {
     public readonly keyFormat?: KeyFormat
   ) {}
 
-  public toJson(): JSONObject{
+  public toJson(): JSONObject {
     const json: JSONObject = {
       id: this.id,
       controller: this.controller,

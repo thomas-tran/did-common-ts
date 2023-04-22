@@ -1,8 +1,8 @@
-import { checkNotNull, hashCode } from './Utils';
-import { IComparable } from './interfaces/IComparable';
+import { checkNotNull, hashCode } from "./Utils";
+import { IComparable } from "./interfaces/IComparable";
 
 export class DID implements IComparable<DID> {
-  private scheme = 'did';
+  private scheme = "did";
 
   constructor(
     public readonly method: string,
@@ -22,24 +22,29 @@ export class DID implements IComparable<DID> {
   }
   public equals(obj: unknown): boolean {
     if (obj === this) {
-        return true;
-      }
-    
-      if (obj instanceof DID) {
-        const did = obj;
-        return this.method === did.method && this.methodSpecificId === did.methodSpecificId;
-      }
-    
-      if (typeof obj === 'string') {
-        return this.toString() === obj;
-      }
-    
-      return false;
+      return true;
+    }
+
+    if (obj instanceof DID) {
+      const did = obj;
+      return (
+        this.method === did.method &&
+        this.methodSpecificId === did.methodSpecificId
+      );
+    }
+
+    if (typeof obj === "string") {
+      return this.toString() === obj;
+    }
+
+    return false;
   }
 
   public compareTo(did: DID): number {
-    checkNotNull(did, 'did is null');
+    checkNotNull(did, "did is null");
     const rc = this.method.localeCompare(did.method);
-    return rc == 0 ? this.methodSpecificId.localeCompare(did.methodSpecificId): rc;
+    return rc == 0
+      ? this.methodSpecificId.localeCompare(did.methodSpecificId)
+      : rc;
   }
 }

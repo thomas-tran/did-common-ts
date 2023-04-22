@@ -1,5 +1,5 @@
-import { VerificationMethod } from './VerificationMethod';
-import { JSONObject } from './Json';
+import { VerificationMethod } from "./VerificationMethod";
+import { JSONObject } from "./Json";
 
 export abstract class VerificationRelationship {
   public verificationReferenceId?: string;
@@ -25,7 +25,7 @@ export abstract class VerificationRelationship {
     } else if (this.verificationReferenceId) {
       return this.verificationReferenceId;
     } else {
-      throw new Error('Invalid verification relationship value');
+      throw new Error("Invalid verification relationship value");
     }
   }
 }

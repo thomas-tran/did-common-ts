@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { JSONObject } from './Json';
-import { checkArgument } from './Utils';
+import { JSONObject } from "./Json";
+import { checkArgument } from "./Utils";
 
 export abstract class DIDEntity<T> {
   public abstract toJSON(): JSONObject;
@@ -9,11 +9,11 @@ export abstract class DIDEntity<T> {
     source: JSONObject | string,
     type: new () => T
   ): T {
-    const condition = source !== '';
-    checkArgument(condition, 'Invalid JSON content');
+    const condition = source !== "";
+    checkArgument(condition, "Invalid JSON content");
 
     let content: JSONObject;
-    if (typeof source === 'string') {
+    if (typeof source === "string") {
       content = JSON.parse(source);
     } else {
       content = source;
@@ -31,7 +31,7 @@ export abstract class DIDEntity<T> {
 
   public serialize(): string {
     try {
-      return JSON.stringify(this.toJSON()).normalize('NFC');
+      return JSON.stringify(this.toJSON()).normalize("NFC");
     } catch (e) {
       throw new Error(`Internal error ${JSON.stringify(e)}`);
     }
