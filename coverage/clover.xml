@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1682173155043" clover="3.2.0">
-  <project timestamp="1682173155043" name="All files">
+<coverage generated="1682299501463" clover="3.2.0">
+  <project timestamp="1682299501463" name="All files">
     <metrics statements="119" coveredstatements="46" conditionals="4" coveredconditionals="3" methods="16" coveredmethods="3" elements="139" coveredelements="52" complexity="0" loc="119" ncloc="119" packages="1" files="3" classes="3"/>
     <file name="DidController.ts" path="E:\Works\n2id\did-common-ts\src\lib\DidController.ts">
       <metrics statements="30" coveredstatements="23" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="3"/>

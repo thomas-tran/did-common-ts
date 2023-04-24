@@ -21,15 +21,13 @@ export class DIDDocumentBuilder {
   }
 
   public addContext(context: string): DIDDocumentBuilder {
-    if(this.didDocument && this.didDocument.contexts == null) {
+    if (this.didDocument && this.didDocument.contexts == null) {
       this.didDocument.contexts = [];
-    } 
-    
+    }
+
     if (!this.didDocument.contexts.includes(context)) {
       this.didDocument.contexts.push(context);
     }
     return this;
   }
-
-
 }
